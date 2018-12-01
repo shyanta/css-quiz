@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Frontend for Dummys</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Frontend Quiz for Jordy</h1>
+            <progress id="progress" value="1" max="15"></progress>
+        </header>
+        <section id="question-container">
+            <h2 id="question-title"></h2>
+            <ol class="questions__list" id="question-answers">
+                <li class="question__answer" id="a"></li>
+                <li class="question__answer" id="b"></li>
+                <li class="question__answer" id="c"></li>
+                <li class="question__answer" id="d"></li>
+            </ol>
+            <div class="loader" id="loader"><p>loading...</p></div>
+        </section>
+        <section id="results">
+            <h1 id="results__grade"></h1>
+            <h2 id="results__title"></h2>
+            <ul id="hints">
+
+            </ul>
+        </section>
+        <script src="js/quiz.js"></script>
+    </body>
+</html>

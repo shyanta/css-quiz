@@ -1,0 +1,10 @@
+.question__list {
+    list-style-type: lower-alpha;
+}
+.question__answer.chosen {
+    background-color: orange;
+}
+
+.loader {
+    display: none;
+}

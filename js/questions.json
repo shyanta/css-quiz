@@ -1,0 +1,139 @@
+[
+    {
+        "ID": 1,
+        "question": "Waar staat de afkorting HTML voor?",
+        "answers" : [ {
+                "type": "a",
+                "value": "antwoord a"
+            },{
+                "type": "b",
+                "value": "antwoord b"
+            },{
+                "type": "c",
+                "value": "Hyper Text Markup Language"
+            },{
+                "type": "d",
+                "value": "antwoord d"
+            } ],
+        "goodAnswer": "c"
+    },{
+        "ID": 2,
+        "question": "Waar staat de afkorting CSS voor?",
+        "answers" : [ {
+                "type": "a",
+                "value": "a"
+            },{
+                "type": "b",
+                "value": "b"
+            },{
+                "type": "c",
+                "value": "c"
+            },{
+                "type": "d",
+                "value": "Cascading Style Sheets"
+            } ],
+        "goodAnswer": "d"
+    },{
+        "ID": 3,
+        "question": "vraag 3",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 4,
+        "question": "test",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 5,
+        "question": "test",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 6,
+        "question": "test",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 7,
+        "question": "test",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 8,
+        "question": "test",
+        "answers" : [ {
+                "type": "a",
+                "value": "test"
+            },{
+                "type": "b",
+                "value": "test"
+            },{
+                "type": "c",
+                "value": "test"
+            },{
+                "type": "d",
+                "value": "test"
+            } ],
+        "goodAnswer": "a"
+    }
+]
