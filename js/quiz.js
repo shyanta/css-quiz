@@ -37,7 +37,7 @@ var data = [
         "goodAnswer": "d"
     },{
         "ID": 3,
-        "classname": "text",
+        "classname": "css",
         "question": "Which is the correct CSS syntax?",
         "answers" : [ {
                 "type": "a",
@@ -146,21 +146,21 @@ var data = [
     },{
         "ID": 9,
         "classname": "text",
-        "question": "What is the default value of the position property",
+        "question": "Which browsers use the -webkit- prefix?",
         "answers" : [ {
                 "type": "a",
-                "value": "fixed"
+                "value": "Mozilla, Chrome and Safari"
             },{
                 "type": "b",
-                "value": "static"
+                "value": "Chrome, Safari and iOS"
             },{
                 "type": "c",
-                "value": "relative"
+                "value": "Opera and Safari"
             },{
                 "type": "d",
-                "value": "absolute"
+                "value": "Mozilla, Android and Opera"
             } ],
-        "goodAnswer": "b"
+        "goodAnswer": "a"
     },{
         "ID": 10,
         "classname": "text",
@@ -203,7 +203,7 @@ var data = [
         "question": "What is the correct HTML for inserting an image?",
         "answers" : [ {
                 "type": "a",
-                "value": "<img alt=\"MyImage\">image.gif</img>"
+                "value": "<img alt=\"MyImage\"> image.gif </img>"
             },{
                 "type": "b",
                 "value": "<img src=\"image.gif\" alt=\"MyImage\">"
@@ -233,13 +233,88 @@ var data = [
                 "value": null,
             } ],
         "goodAnswer": "a"
+    },{
+        "ID": 14,
+        "classname": "html",
+        "question": "What input type is invalid?",
+        "answers" : [ {
+                "type": "a",
+                "value": "<input type=\"range\">"
+            },{
+                "type": "b",
+                "value": "<input type=\"time\">"
+            },{
+                "type": "c",
+                "value": "<input type=\"datetime-local\">"
+            },{
+                "type": "d",
+                "value": "<input type=\"mail\">",
+            } ],
+        "goodAnswer": "d"
+    },{
+        "ID": 15,
+        "classname": "css",
+        "question": "To make an element partially grey, you use:",
+        "answers" : [ {
+                "type": "a",
+                "value": "grayscale(1/2)"
+            },{
+                "type": "b",
+                "value": "grayscale(0.5)"
+            },{
+                "type": "c",
+                "value": "grayscale(50%)"
+            },{
+                "type": "d",
+                "value": null,
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 16,
+        "classname": "css",
+        "question": "How can you center your flex items along the main axis?",
+        "answers" : [ {
+                "type": "a",
+                "value": "align-self"
+            },{
+                "type": "b",
+                "value": "align-items"
+            },{
+                "type": "c",
+                "value": "justify-content"
+            },{
+                "type": "d",
+                "value": null,
+            } ],
+        "goodAnswer": "c"
+    },{
+        "ID": 17,
+        "classname": "html",
+        "question": "Which HTML element does not exist?",
+        "answers" : [ {
+                "type": "a",
+                "value": "<details>"
+            },{
+                "type": "b",
+                "value": "<keygen>"
+            },{
+                "type": "c",
+                "value": "<options>"
+            },{
+                "type": "d",
+                "value": "<samp>"
+            } ],
+        "goodAnswer": "c"
     }
 ];
 
 var hints = [
-    '',
-    '',
-    ''
+    'Vroeger kwam je hier heel vaak',
+    'Toen je niet meer thuis woonde, ging je toch vaak eerst nog hierheen om gewoon even te kijken',
+    'Ooit was het van jou',
+    'Als er al een lichtje gaat branden, moet je misschien kijken waarmee je het licht op deze plek echt laat branden',
+    'Je moet misschien een krukje pakken, dan kan je er overheen kijken',
+    'Nu hoef ik je denk echt niets meer te vertellen. Ga maar snel kijken.'
 ];
 
 // Document Variables
@@ -252,12 +327,11 @@ var questionAnswerC = document.getElementById("c");
 var questionAnswerD = document.getElementById("d");
 var questionLength = data.length;
 var progress = document.getElementById("progress");
-var loader = document.getElementById("loader");
 
 var resultsSection = document.getElementById("results");
 var resultsTitle = document.getElementById("results__title");
 var resultsGrade = document.getElementById("results__grade");
-var hints = document.getElementById("hint");
+var hintsSection = document.getElementById("hints");
 
 // Variables that will be set in the functions
 var questionNumber = 1;
@@ -271,8 +345,7 @@ var valAnswerD;
 
 function loadQuestion(data, oldQuestion, oldAnswer){
     progress.setAttribute('value', questionNumber);
-    progress.setAttribute('max', questionLength)
-    questionAnswerD.style.display = 'list-item';
+    progress.setAttribute('max', questionLength);
     
     questionTitle.innerText = data.question;
     questionAnswers.className = 'question__list';
@@ -300,8 +373,9 @@ function loadQuestion(data, oldQuestion, oldAnswer){
     questionAnswerC.innerText = valAnswerC;
     if (valAnswerD) {
         questionAnswerD.innerText = valAnswerD;
+        questionAnswerD.classList.remove('hide');
     } else {
-        questionAnswerD.style.display = 'none';
+        questionAnswerD.classList.add('hide');
     }
 
     if (oldQuestion){
@@ -341,7 +415,7 @@ function nextQuestion(answer){
             return;
         }
         loadQuestion(data[questionNumber - 1], data[questionNumber -2], answer);
-    }, 600);
+    }, 1000);
 }
 
 function showResults(){
@@ -352,29 +426,35 @@ function showResults(){
     var quizGrade = ((rightAnswers / questionLength) * 9) + 1;
 
     var resultsText;
-    if (1 < quizGrade < 5){
+    if (quizGrade > 1 && quizGrade < 5){
         resultsText = 'Damn, you\'d say you would still know something. But this really sucks. You know nothing anymore man.'
-    } else if ( 5 < quizGrade < 7) {
+        numHints = 3;
+    } else if (quizGrade > 5 && quizGrade < 7) {
         resultsText = 'I mean, it\'s okay but this still is a bad score dude.';
-    } else if ( 7 < quizGrade < 8) {
+        numHints = 4;
+    } else if (quizGrade > 7 && quizGrade < 8) {
         resultsText = 'Not so bad. You still know your Frontend';
-    } else if ( 8 < quizGrade < 9) {
+        numHints = 4;
+    } else if (quizGrade > 8 && quizGrade < 9) {
         resultsText = 'Wow! Very nice, I knew you could do it';
-    } else if ( 9 < quizGrade < 10) {
-        resultsText = 'WAY TO GO!!! You still know your ';
+        numHints = 5;
+    } else if (quizGrade > 9 && quizGrade < 10) {
+        resultsText = 'WAY TO GO!!! You still know how to be a Frontender!!!';
+        numHints = 6;
     }
 
     resultsTitle.innerText = resultsText;
     resultsGrade.innerText = Math.round(quizGrade * 10) / 10;
-
+    
+    for (let i = 0; i < numHints; i++) {
+        hintsSection.innerHTML += '<li>' + hints[i] + '</li>';
+    }
 }
 
 function toggleLoading(bool, answer) {
     if (bool) {
-        loader.style.display = 'block';
         document.getElementById(answer).classList.add('chosen');
     } else {
-        loader.style.display = 'none';
         document.getElementById(answer).classList.remove('chosen');
     }
 }

@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Frontend for Dummys</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     </head>
     <body>
@@ -20,14 +22,12 @@
                 <li class="question__answer" id="c"></li>
                 <li class="question__answer" id="d"></li>
             </ol>
-            <div class="loader" id="loader"><p>loading...</p></div>
         </section>
         <section id="results">
             <h1 id="results__grade"></h1>
-            <h2 id="results__title"></h2>
-            <ul id="hints">
-
-            </ul>
+            <blockquote class="quote" ><p id="results__title"></p></blockquote>
+            <p><b>Here are some hints to help you find your present</b></p>
+            <ol id="hints"></ol>
         </section>
         <script src="js/quiz.js"></script>
     </body>
