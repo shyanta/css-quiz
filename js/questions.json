@@ -1,33 +1,35 @@
 [
     {
         "ID": 1,
-        "question": "Waar staat de afkorting HTML voor?",
+        "classname": "text",
+        "question": "What does HTML stand for?",
         "answers" : [ {
                 "type": "a",
-                "value": "antwoord a"
+                "value": "Home Tool Markup Language"
             },{
                 "type": "b",
-                "value": "antwoord b"
+                "value": "Hyperlinks and Text Markup Language"
             },{
                 "type": "c",
                 "value": "Hyper Text Markup Language"
             },{
                 "type": "d",
-                "value": "antwoord d"
+                "value": null
             } ],
         "goodAnswer": "c"
     },{
         "ID": 2,
-        "question": "Waar staat de afkorting CSS voor?",
+        "classname": "text",
+        "question": "What does CSS stand for?",
         "answers" : [ {
                 "type": "a",
-                "value": "a"
+                "value": "Creative Style Sheets"
             },{
                 "type": "b",
-                "value": "b"
+                "value": "Computer Style Sheets"
             },{
                 "type": "c",
-                "value": "c"
+                "value": "Colorful Style Sheets"
             },{
                 "type": "d",
                 "value": "Cascading Style Sheets"
@@ -35,105 +37,273 @@
         "goodAnswer": "d"
     },{
         "ID": 3,
-        "question": "vraag 3",
+        "classname": "css",
+        "question": "Which is the correct CSS syntax?",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": "{body;color:black;}"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "{body:color=black;}"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "body:color=black;"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "body {color: black;}"
             } ],
-        "goodAnswer": "a"
+        "goodAnswer": "d"
     },{
         "ID": 4,
-        "question": "test",
+        "classname": "comment",
+        "question": "How do you insert a comment in a CSS file?",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": "<!-- comment -->"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "// comment"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "/* comment */"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "//* comment *//"
             } ],
-        "goodAnswer": "a"
+        "goodAnswer": "c"
     },{
         "ID": 5,
-        "question": "test",
+        "classname": "hexcodes",
+        "question": "Which hex code stands for yellow",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": " #FF00FF"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "#FFFF00"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "#00FFFF"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "#00FF00"
             } ],
-        "goodAnswer": "a"
+        "goodAnswer": "b"
     },{
         "ID": 6,
-        "question": "test",
+        "classname": "text",
+        "question": "Which property is used to change the font of an element?",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": "font"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "font-style"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "font-family"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "font-type"
             } ],
-        "goodAnswer": "a"
+        "goodAnswer": "c"
     },{
         "ID": 7,
-        "question": "test",
+        "classname": "html",
+        "question": "How do you create a list which contains items with a bullet",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": "<ul style=\"list-style-type:disc\"></ul>"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "<ol style=\"list-style-type:disc\"></ol>"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "<ul style=\"list-style-type:circle\"></ul>"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "<ol style=\"list-style-type:circle\"></ol>"
             } ],
         "goodAnswer": "a"
     },{
         "ID": 8,
-        "question": "test",
+        "classname": "text",
+        "question": "What is the default value of the position property",
         "answers" : [ {
                 "type": "a",
-                "value": "test"
+                "value": "fixed"
             },{
                 "type": "b",
-                "value": "test"
+                "value": "static"
             },{
                 "type": "c",
-                "value": "test"
+                "value": "relative"
             },{
                 "type": "d",
-                "value": "test"
+                "value": "absolute"
+            } ],
+        "goodAnswer": "b"
+    },{
+        "ID": 9,
+        "classname": "text",
+        "question": "Which browsers use the -webkit- prefix?",
+        "answers" : [ {
+                "type": "a",
+                "value": "Mozilla, Chrome and Safari"
+            },{
+                "type": "b",
+                "value": "Chrome, Safari and iOS"
+            },{
+                "type": "c",
+                "value": "Opera and Safari"
+            },{
+                "type": "d",
+                "value": "Mozilla, Android and Opera"
             } ],
         "goodAnswer": "a"
+    },{
+        "ID": 10,
+        "classname": "text",
+        "question": "Who is making the Web standards?",
+        "answers" : [ {
+                "type": "a",
+                "value": "Google"
+            },{
+                "type": "b",
+                "value": "Microsoft"
+            },{
+                "type": "c",
+                "value": "Mozilla"
+            },{
+                "type": "d",
+                "value": "The World Wide Web Consortium"
+            } ],
+        "goodAnswer": "d"
+    },{
+        "ID": 11,
+        "classname": "html",
+        "question": "Choose the correct HTML element to define important text",
+        "answers" : [ {
+                "type": "a",
+                "value": "<i>"
+            },{
+                "type": "b",
+                "value": "<strong>"
+            },{
+                "type": "c",
+                "value": "<important>"
+            },{
+                "type": "d",
+                "value": "<b>"
+            } ],
+        "goodAnswer": "b"
+    },{
+        "ID": 12,
+        "classname": "text",
+        "question": "What is the correct HTML for inserting an image?",
+        "answers" : [ {
+                "type": "a",
+                "value": "<img alt=\"MyImage\"> image.gif </img>"
+            },{
+                "type": "b",
+                "value": "<img src=\"image.gif\" alt=\"MyImage\">"
+            },{
+                "type": "c",
+                "value": "<img href=\"image.gif\" alt=\"MyImage\">"
+            },{
+                "type": "d",
+                "value": "<image src=\"image.gif\" alt=\"MyImage\">"
+            } ],
+        "goodAnswer": "b"
+    },{
+        "ID": 13,
+        "classname": "text",
+        "question": "An <iframe> is used to display a web page within a web page.",
+        "answers" : [ {
+                "type": "a",
+                "value": "true"
+            },{
+                "type": "b",
+                "value": "false"
+            },{
+                "type": "c",
+                "value": "There is no such thing as an <iframe>"
+            },{
+                "type": "d",
+                "value": null,
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 14,
+        "classname": "html",
+        "question": "What input type is invalid?",
+        "answers" : [ {
+                "type": "a",
+                "value": "<input type=\"range\">"
+            },{
+                "type": "b",
+                "value": "<input type=\"time\">"
+            },{
+                "type": "c",
+                "value": "<input type=\"datetime-local\">"
+            },{
+                "type": "d",
+                "value": "<input type=\"mail\">",
+            } ],
+        "goodAnswer": "d"
+    },{
+        "ID": 15,
+        "classname": "css",
+        "question": "To make an element partially grey, you use:",
+        "answers" : [ {
+                "type": "a",
+                "value": "grayscale(1/2)"
+            },{
+                "type": "b",
+                "value": "grayscale(0.5)"
+            },{
+                "type": "c",
+                "value": "grayscale(50%)"
+            },{
+                "type": "d",
+                "value": null,
+            } ],
+        "goodAnswer": "a"
+    },{
+        "ID": 16,
+        "classname": "css",
+        "question": "How can you center your flex items along the main axis?",
+        "answers" : [ {
+                "type": "a",
+                "value": "align-self"
+            },{
+                "type": "b",
+                "value": "align-items"
+            },{
+                "type": "c",
+                "value": "justify-content"
+            },{
+                "type": "d",
+                "value": null,
+            } ],
+        "goodAnswer": "c"
+    },{
+        "ID": 17,
+        "classname": "html",
+        "question": "Which HTML element does not exist?",
+        "answers" : [ {
+                "type": "a",
+                "value": "<details>"
+            },{
+                "type": "b",
+                "value": "<keygen>"
+            },{
+                "type": "c",
+                "value": "<options>"
+            },{
+                "type": "d",
+                "value": "<samp>"
+            } ],
+        "goodAnswer": "c"
     }
-]
+];
